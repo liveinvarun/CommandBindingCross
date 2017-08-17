@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainViewController" id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="250" sectionHeaderHeight="10" sectionFooterHeight="10" translatesAutoresizingMaskIntoConstraints="NO" id="0Sg-zF-fOV">
+                                <rect key="frame" x="0.0" y="184" width="375" height="300"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="Ipz-cX-v9d"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" red="0.52156862749999999" green="0.73333333329999995" blue="0.13725490200000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="signInCellIdentifier" id="wlw-FP-oIg" customClass="LoginCell">
+                                        <rect key="frame" x="0.0" y="10" width="375" height="250"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wlw-FP-oIg" id="TUQ-6h-CRD">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="249.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email Address" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nfd-9w-pxo" customClass="FloatingTextField">
+                                                    <rect key="frame" x="20" y="20" width="335" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="VRe-rR-wku"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-Sf-iAG">
+                                                    <rect key="frame" x="20" y="70" width="335" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="4Vd-RV-QCJ"/>
+                                                    </constraints>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyb-vs-tYo">
+                                                    <rect key="frame" x="20" y="150" width="130" height="30"/>
+                                                    <color key="backgroundColor" red="0.50810533759999998" green="0.72807615999999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="130" id="KF6-6z-DTM"/>
+                                                        <constraint firstAttribute="height" constant="30" id="ZHw-Nw-05n"/>
+                                                    </constraints>
+                                                    <state key="normal" title="SignIn">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                                <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eCD-ss-eTD">
+                                                    <rect key="frame" x="226" y="149" width="129" height="30"/>
+                                                    <color key="backgroundColor" red="0.74117647060000003" green="0.81568627449999997" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="4Zj-DW-GV4"/>
+                                                        <constraint firstAttribute="width" constant="129" id="8SC-pb-DNe"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Cancel">
+                                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <integer key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.95294117649999999" green="0.97647058819999999" blue="0.98431372549999996" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="tyb-vs-tYo" firstAttribute="leading" secondItem="bqr-Sf-iAG" secondAttribute="leading" id="4Up-Fz-kb8"/>
+                                                <constraint firstAttribute="trailing" secondItem="eCD-ss-eTD" secondAttribute="trailing" constant="20" id="FID-uX-XVp"/>
+                                                <constraint firstAttribute="bottom" secondItem="tyb-vs-tYo" secondAttribute="bottom" constant="20" id="Kh3-xh-qay"/>
+                                                <constraint firstAttribute="trailing" secondItem="bqr-Sf-iAG" secondAttribute="trailing" constant="20" id="Vdh-KR-uK6"/>
+                                                <constraint firstItem="bqr-Sf-iAG" firstAttribute="leading" secondItem="TUQ-6h-CRD" secondAttribute="leading" constant="20" id="XpN-Ba-Neo"/>
+                                                <constraint firstAttribute="trailing" secondItem="nfd-9w-pxo" secondAttribute="trailing" constant="20" id="ZTs-x8-Fm4"/>
+                                                <constraint firstItem="nfd-9w-pxo" firstAttribute="top" secondItem="TUQ-6h-CRD" secondAttribute="top" constant="20" id="qJg-mD-eRn"/>
+                                                <constraint firstItem="nfd-9w-pxo" firstAttribute="leading" secondItem="TUQ-6h-CRD" secondAttribute="leading" constant="20" id="r8S-ys-UU3"/>
+                                                <constraint firstAttribute="bottom" secondItem="eCD-ss-eTD" secondAttribute="bottom" constant="20" id="uwE-ja-0CD"/>
+                                                <constraint firstItem="bqr-Sf-iAG" firstAttribute="top" secondItem="nfd-9w-pxo" secondAttribute="bottom" constant="20" id="zMk-tu-kXv"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.9994240403175354" green="0.58821814797396665" blue="0.6807002808170346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <outlet property="cancelBtn" destination="eCD-ss-eTD" id="F88-kV-HaL"/>
+                                            <outlet property="emailField" destination="nfd-9w-pxo" id="name-outlet-nfd-9w-pxo"/>
+                                            <outlet property="passwordField" destination="bqr-Sf-iAG" id="name-outlet-bqr-Sf-iAG"/>
+                                            <outlet property="signInBtn" destination="tyb-vs-tYo" id="RfO-Sg-lM9"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="0Sg-zF-fOV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="AOa-cw-7IG"/>
+                            <constraint firstItem="0Sg-zF-fOV" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="UTD-9W-Fcl"/>
+                            <constraint firstItem="0Sg-zF-fOV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oYn-0H-Sjt"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginTableView" destination="0Sg-zF-fOV" id="QBh-fB-j1R"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="140" y="136.28190000000001"/>
+        </scene>
+    </scenes>
+</document>
