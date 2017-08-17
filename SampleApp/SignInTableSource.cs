@@ -60,7 +60,7 @@ namespace SampleApp
                 if (loginCell != null)
                 {
                     loginCell.DataContext = _viewmodel.LoggedInUser;
-                    loginCell.UpateCell();
+                    //loginCell.UpateCell();
                 }
 
                 return loginCell;

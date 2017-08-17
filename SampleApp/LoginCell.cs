@@ -12,7 +12,22 @@ namespace SampleApp
     {
         public LoginCell(IntPtr handle) : base(handle)
         {
+            this.DelayBind(() =>
+            {
+                var set = this.CreateBindingSet<LoginCell, UserViewModel>();
+                set.Bind(emailField).To(p => p.UserName);
+                //set.Bind().For(t => t.passwordField).To(p => p.Password);
 
+                set.Bind(signInBtn.Tap()).For(c => c.Command).To(p => p.SignInCommand);
+                set.Apply();
+
+                var set2 = this.CreateBindingSet<LoginCell, UserViewModel>();
+                //  set2.Bind(emailField).To(p => p.UserName);
+                //set.Bind().For(t => t.passwordField).To(p => p.Password);
+
+                set2.Bind(signInBtn).For(c => c.Enabled).To(p => p.CanExecute);
+                set2.Apply(); ;
+            });
 
         }
 
@@ -20,12 +35,7 @@ namespace SampleApp
         {
             ((FloatingTextField)emailField).IsUnderLined = true;
 
-            var set = this.CreateBindingSet<LoginCell, UserViewModel>();
-            set.Bind(emailField).To(p => p.UserName);
-            //set.Bind().For(t => t.passwordField).To(p => p.Password);
 
-            set.Bind(signInBtn).To(p => p.SignInCommand).TwoWay();
-            set.Apply();
             //            signInBtn.TouchUpInside += (s, e) =>
             //            {
             //

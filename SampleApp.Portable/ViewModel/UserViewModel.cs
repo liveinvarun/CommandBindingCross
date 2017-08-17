@@ -72,7 +72,18 @@ namespace SampleApp.Portable
             return _canExecute;
         }
 
-
+        public bool CanExecute
+        {
+            get
+            {
+                return _canExecute;
+            }
+            set
+            {
+                _canExecute = value;
+                RaisePropertyChanged(() => CanExecute);
+            }
+        }
 
 
         public IMvxCommand SignInCommand
@@ -83,6 +94,7 @@ namespace SampleApp.Portable
                 {
                     _canExecute = true;
                     _signInCommand = new MvxCommand(OnSignIn, CanExecuteChanged);
+                    RaisePropertyChanged(() => CanExecute);
                 }
                 return _signInCommand;
             }

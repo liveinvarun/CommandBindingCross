@@ -46,7 +46,7 @@ namespace SampleApp
             }
             var source = new SignInTableSource(loginTableView);
             var set = this.CreateBindingSet<ViewController, SignInViewModel>();
-            set.Bind(source).To(vm => vm.LoggedInUser);
+            //set.Bind(source).To(vm => vm.LoggedInUser);
             set.Apply();
 
 
